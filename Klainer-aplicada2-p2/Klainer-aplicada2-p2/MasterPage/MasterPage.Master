@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Klainer_aplicada2_p2.MasterPage.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Content/toastr.min.css" rel="stylesheet" />
+
+
+ <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+    <script src="../JQuery/toastr.min.js"></script>
+
+     
+    
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+            font-size: x-large;
+        }
+        .auto-style2 {
+            font-size: large;
+        }
+        .auto-style4 {
+            font-size: x-large;
+        }
+        .auto-style3 {
+            width: 300px;
+        }
+        .auto-style5 {
+            text-align: center;
+            font-size: x-large;
+            width: 763px;
+        }
+        .auto-style6 {
+            font-size: large;
+            width: 356px;
+        }
+        .auto-style7 {
+            text-align: center;
+            font-size: large;
+            width: 763px;
+        }
+        .auto-style8 {
+            width: 300px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="auto-style1">
+            <strong>Pagina Principal</strong></div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <strong><em><span class="auto-style4">Registro de Ventas</span><span class="auto-style2"><br />
+        </span></em>
+        <table>
+            <tr>
+                <td class="auto-style5">&nbsp;&nbsp;&nbsp;<span class="auto-style2">ID</span><asp:TextBox ID="TextBoxId" runat="server" Height="21px"></asp:TextBox>
+                    <asp:Button ID="Buttonbuscar" runat="server" Height="33px" Text="Buscar" Width="93px" />
+                </td>
+                <td class="auto-style6">Fecha</td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="TextBoxfecha" runat="server" TextMode="Date"></asp:TextBox>
+                </td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style5"><span class="auto-style2">Descripcion</span><asp:TextBox ID="TextBoxdescripcion" runat="server" style="margin-left: 11px"></asp:TextBox>
+                </td>
+                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style7">Articulo</td>
+                <td class="auto-style6">Cantidad</td>
+                <td class="auto-style8">Precio</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+                    <asp:TextBox ID="TextBoxaarticulo" runat="server" Height="22px" Width="182px"></asp:TextBox>
+                </td>
+                <td class="auto-style6">
+                    <asp:TextBox ID="TextBoxcantidad" runat="server" TextMode="Number"></asp:TextBox>
+                </td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="TextBoxprecio" runat="server" TextMode="Number" Width="167px"></asp:TextBox>
+                </td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style1" colspan="3">
+                    <asp:GridView ID="GridViewventas" runat="server" Width="99%">
+                    </asp:GridView>
+                </td>
+                <td class="auto-style1">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style5">&nbsp;</td>
+                <td class="auto-style6">&nbsp;</td>
+                <td class="auto-style3">MONTO</td>
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+        </table>
+        </strong>
+        <asp:Button ID="Button1" runat="server" Text="Nuevo" Width="69px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button2" runat="server" Text="Guardar" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button3" runat="server" Text="Eliminar" />
+&nbsp;
+    </form>
+
+   
+
+</body>
+</html>
